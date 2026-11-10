@@ -202,7 +202,8 @@ const UI = (() => {
   }
 
   function goLogin() {
-    const next = encodeURIComponent(location.pathname.split('/').pop() + location.search);
+    const pageName = location.pathname.split('/').pop() || 'index.html';
+    const next = encodeURIComponent(pageName + location.search);
     location.href = `login.html?next=${next}`;
   }
 

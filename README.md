@@ -4,7 +4,7 @@
 
 Сайт: https://kairkanova.github.io/tour-agency/
 
-Тестовый аккаунт: `people@test.com` / `123456`
+Тестовый аккаунт: `people@test.com` / `Travel2026`
 
 ## Страницы
 

@@ -20,7 +20,6 @@
 
   async function render() {
     const favTours = await Store.getFavoriteTours();
-    const since = user.createdAt ? `Участник с ${user.createdAt.slice(0, 4)} года` : 'Новый участник';
 
     root.innerHTML = `
       <section class="card">
@@ -29,7 +28,6 @@
           <div class="info">
             <h1>${esc(user.firstName)} ${esc(user.lastName)}</h1>
             <div class="muted">${esc(user.email)}</div>
-            <span class="member-tag">${since}</span>
           </div>
           <a href="#personal" class="btn btn-ghost btn-sm">Редактировать</a>
         </div>
