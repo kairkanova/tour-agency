@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход - Атлас</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container auth-wrap">
+    <div class="auth-card">
+      <div class="auth-visual" style="background-image:url('images/maldives2.jpg')">
+        <h2>С возвращением!</h2>
+        <p>Войдите, чтобы открыть сохранённые туры и личный кабинет.</p>
+      </div>
+
+      <form class="auth-form" id="login-form" novalidate>
+        <h1>Вход</h1>
+        <div class="alert alert-error" id="form-error" hidden></div>
+
+        <div>
+          <label class="field-label" for="email">Email</label>
+          <input class="input" type="email" id="email" autocomplete="email" placeholder="you@example.com" required>
+          <div class="field-error" data-error-for="email"></div>
+        </div>
+        <div>
+          <label class="field-label" for="password">Пароль</label>
+          <input class="input" type="password" id="password" autocomplete="current-password" placeholder="Ваш пароль" required>
+          <div class="field-error" data-error-for="password"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Войти</button>
+        <p class="muted small">Нет аккаунта? <a href="register.html" id="to-register">Зарегистрироваться</a></p>
+        <p class="demo-hint">Тестовый аккаунт из <b>data/users.json</b>:<br>
+          <code>people@test.com</code> / <code>123456</code></p>
+      </form>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

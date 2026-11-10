@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация - Атлас</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container auth-wrap">
+    <div class="auth-card">
+      <div class="auth-visual" style="background-image:url('images/santorini2.jpg')">
+        <h2>Сохраняйте туры мечты</h2>
+        <p>После регистрации избранное будет доступно при каждом входе. В подарок - 500 бонусов.</p>
+      </div>
+
+      <form class="auth-form" id="register-form" novalidate>
+        <h1>Регистрация</h1>
+        <div class="alert alert-error" id="form-error" hidden></div>
+
+        <div class="form-grid">
+          <div>
+            <label class="field-label" for="firstName">Имя</label>
+            <input class="input" id="firstName" autocomplete="given-name" placeholder="Ваше имя" required>
+            <div class="field-error" data-error-for="firstName"></div>
+          </div>
+          <div>
+            <label class="field-label" for="lastName">Фамилия</label>
+            <input class="input" id="lastName" autocomplete="family-name" placeholder="Ваша фамилия" required>
+            <div class="field-error" data-error-for="lastName"></div>
+          </div>
+          <div class="full">
+            <label class="field-label" for="email">Email</label>
+            <input class="input" type="email" id="email" autocomplete="email" placeholder="you@example.com" required>
+            <div class="field-error" data-error-for="email"></div>
+          </div>
+          <div class="full">
+            <label class="field-label" for="phone">Телефон <span class="muted">(необязательно)</span></label>
+            <input class="input" type="tel" id="phone" autocomplete="tel" placeholder="+7 (700) 000-00-00">
+            <div class="field-error" data-error-for="phone"></div>
+          </div>
+          <div>
+            <label class="field-label" for="password">Пароль</label>
+            <input class="input" type="password" id="password" autocomplete="new-password" placeholder="Минимум 6 символов" required>
+            <div class="field-error" data-error-for="password"></div>
+          </div>
+          <div>
+            <label class="field-label" for="password2">Повторите пароль</label>
+            <input class="input" type="password" id="password2" autocomplete="new-password" placeholder="Ещё раз" required>
+            <div class="field-error" data-error-for="password2"></div>
+          </div>
+          <div class="full">
+            <label class="checkbox"><input type="checkbox" id="agree"> Согласен(на) на обработку персональных данных</label>
+            <div class="field-error" data-error-for="agree"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Создать аккаунт</button>
+        <p class="muted small">Уже есть аккаунт? <a href="login.html" id="to-login">Войти</a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

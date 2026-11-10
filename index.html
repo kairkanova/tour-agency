@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Атлас - подбор туров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Найдите тур мечты за пару кликов</h1>
+      <p>Укажите направление, даты и бюджет - мы подберём подходящие варианты. Понравившиеся туры сохраняйте в избранное.</p>
+    </section>
+
+    <!-- Панель подбора тура (UC-01) -->
+    <form class="card filter-panel" id="filter-form" novalidate>
+      <div class="filter-head">
+        <h2>Подбор тура</h2>
+        <span class="muted small">Все параметры необязательны</span>
+      </div>
+
+      <div class="filter-grid">
+        <div>
+          <span class="field-label">Страна</span>
+          <div class="chips" id="country-chips"></div>
+        </div>
+
+        <div>
+          <span class="field-label">Даты поездки</span>
+          <div class="field-row">
+            <input type="date" class="input" id="date-from" aria-label="Дата начала">
+            <span class="sep">-</span>
+            <input type="date" class="input" id="date-to" aria-label="Дата окончания">
+          </div>
+          <div class="field-error" id="date-error"></div>
+        </div>
+
+        <div>
+          <span class="field-label">Диапазон цены, $ за человека</span>
+          <div class="field-row">
+            <label class="input-prefix"><span>$</span>
+              <input type="number" class="input" id="price-min" min="0" step="50" placeholder="от" aria-label="Цена от">
+            </label>
+            <span class="sep">-</span>
+            <label class="input-prefix"><span>$</span>
+              <input type="number" class="input" id="price-max" min="0" step="50" placeholder="до" aria-label="Цена до">
+            </label>
+          </div>
+          <div class="field-error" id="price-error"></div>
+        </div>
+
+        <div>
+          <span class="field-label">Рейтинг отеля</span>
+          <div class="chips" id="rating-chips">
+            <button type="button" class="chip is-active" data-rating="0">Любой</button>
+            <button type="button" class="chip" data-rating="4">4.0+</button>
+            <button type="button" class="chip" data-rating="4.5">4.5+</button>
+            <button type="button" class="chip" data-rating="4.8">4.8+</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="field-label" for="airline">Авиакомпания</label>
+          <select class="select" id="airline">
+            <option value="">Любая</option>
+          </select>
+        </div>
+
+        <div>
+          <span class="field-label">Перелёт</span>
+          <label class="checkbox" style="height:44px">
+            <input type="checkbox" id="direct-only"> Только прямые рейсы
+          </label>
+        </div>
+      </div>
+
+      <div class="filter-actions">
+        <button type="button" class="btn btn-outline" id="reset-btn">Сбросить всё</button>
+        <button type="submit" class="btn btn-primary" id="show-btn">Показать туры</button>
+      </div>
+    </form>
+
+    <!-- Список туров -->
+    <section class="section" id="results">
+      <div class="results-head">
+        <h2 class="section-title" id="results-title">Все туры</h2>
+        <select class="select" id="sort" aria-label="Сортировка">
+          <option value="default">Сначала популярные</option>
+          <option value="price-asc">Сначала дешевле</option>
+          <option value="price-desc">Сначала дороже</option>
+          <option value="rating">По рейтингу отеля</option>
+          <option value="date">По дате вылета</option>
+        </select>
+      </div>
+      <div id="tours-list"><div class="loader"></div></div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

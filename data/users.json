@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "firstName": "Тестовый",
+    "lastName": "Пользователь",
+    "email": "people@test.com",
+    "passwordHash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "phone": "+7 (701) 123-45-67",
+    "birthDate": "1995-06-14",
+    "city": "Алматы",
+    "country": "Казахстан",
+    "createdAt": "2025-03-02",
+    "trips": 12,
+    "bonuses": 2450,
+    "reviewsCount": 5,
+    "favorites": [3, 2]
+  }
+]

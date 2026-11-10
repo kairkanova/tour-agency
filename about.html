@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас - Атлас</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container">
+    <section class="hero" style="background-image:url('images/bali1.jpg');padding-bottom:44px;min-height:240px">
+      <h1>О турагентстве «Атлас»</h1>
+      <p>Помогаем быстро найти тур под ваши даты, бюджет и направление.</p>
+    </section>
+
+    <section class="section">
+      <div class="about-grid">
+        <div class="card">
+          <div class="state-icon" id="i1"></div>
+          <h3>Быстрый подбор</h3>
+          <p class="muted">Все параметры в одной панели: страна, даты, цена, рейтинг отеля и авиакомпания.</p>
+        </div>
+        <div class="card">
+          <div class="state-icon" id="i2"></div>
+          <h3>Подробные карточки</h3>
+          <p class="muted">Вся информация об отеле, перелёте, питании и страховке на одной странице.</p>
+        </div>
+        <div class="card">
+          <div class="state-icon" id="i3"></div>
+          <h3>Избранное в один клик</h3>
+          <p class="muted">Сохраняйте понравившиеся варианты и возвращайтесь к ним в любое время.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title" style="margin-bottom:12px">О проекте</h2>
+      <p class="muted">Учебное веб-приложение турагентства.
+        Приложение разработано по итерационной модели: блоки создавались постепенно, после каждой итерации проверялся функционал и вносились правки.</p>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    UI.renderHeader('about');
+    UI.renderFooter();
+    document.getElementById('i1').innerHTML = UI.icon.pin;
+    document.getElementById('i2').innerHTML = UI.icon.hotel;
+    document.getElementById('i3').innerHTML = UI.icon.heart;
+  </script>
+</body>
+</html>
